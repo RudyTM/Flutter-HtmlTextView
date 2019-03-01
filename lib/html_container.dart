@@ -16,8 +16,6 @@ class HtmlContainer {
     switch (tag) {
       case "p":
         return P;
-      case "a":
-        return A;
       case "h1":
         return H1;
       case "h2":
@@ -40,8 +38,7 @@ class HtmlContainer {
         tag == "h3" ||
         tag == "h4" ||
         tag == "h5" ||
-        tag == "h6" ||
-    tag == "a";
+        tag == "h6";
   }
 
   int type;
@@ -64,7 +61,7 @@ class HtmlContainer {
       } else {
         contents.add(Text(
           (node as HtmlNode).text,
-          style: TextStyle(fontSize: 4),
+          style: TextStyle(fontSize: 12),
         ));
       }
     });
